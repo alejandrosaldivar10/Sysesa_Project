@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>CLIENTES SYSESA</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-4">
+		<div class="col-sm-6">
+		<form th:action="@{/save}" th:object=${cliente} method="POST">
+			<div>
+				<div class="card-header">
+					<h3>Modulo Cliente</h3>
+				</div>
+				<div class="card-boy">
+					<div class="form-group">
+						<label>ID</label>
+						<input th:field="*{id}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>NOMBRE</label>
+						<input th:field="*{nombre}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>TELEFONO</label>
+						<input th:field="*{telefono}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>CORREO</label>
+						<input th:field="*{correo}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>DOMICILIO</label>
+						<input th:field="*{domicilio}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>FECHA DE NACIMIENTO</label>
+						<input th:field="*{fechaNacimiento}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>GENERO</label>
+						<input th:field="*{genero}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>EMPRESA</label>
+						<input th:field="*{empresa}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>ULTIMO SERVICIO</label>
+						<input th:field="*{ultimoServicio}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>SERVICIO REALIZADO</label>
+						<input th:field="*{servicioRealizado}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>REMISION O FACTURA</label>
+						<input th:field="*{remisionFactura}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>DATOS FISCALES</label>
+						<input th:field="*{datosFiscales}" type="text" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>ESTATUS</label>
+						<input th:field="*{estatus}" type="text" class="form-control"/>
+					</div>
+				</div>
+				<div class="card-footer">
+					<input type="submit" value="Guardar" class="btn btn-success">
+				</div>
+			</div>
+		</form>
+			
+		</div>
+	</div>
+
+</body>
+</html> 
